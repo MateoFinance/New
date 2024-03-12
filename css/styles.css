@@ -237,6 +237,7 @@ body {
   display: inline-block;
   font-size: 12px;
   font-weight: 600;
+  font-family: "Coiny", system-ui;
 }
 
 .product-image {
