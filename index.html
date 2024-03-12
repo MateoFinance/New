@@ -25,15 +25,11 @@
 
     <div class="container">
         <header class="header-home">
-            <div class="header-left">
-                <i class="fas fa-user"></i>
-            </div>
+
             <div class="header-center">
                 <img src="initial-image.jpg" alt="Logo" id="center-image">
             </div>
-            <div class="header-right">
-                <i class="fas fa-ellipsis-v"></i>
-            </div>
+
         </header>
 
 
@@ -74,44 +70,58 @@
                 <span>Favorites</span>
             </div>
         </div>
-        <div class="grad">
-            
+        <div class="grad-container">
+            <div class="grad">
 
 
 
 
-            <div class="container-record">
-                <img class="record" src="https://res.cloudinary.com/benfiika/image/upload/v1472919793/design003/vinyl.png" alt="Vinyl Record">
-                <div class="circle-text"> 
-                <span>Year Book Digital</span>
-                <p>Lorem Ipsum Dolor Amet</p>
+
+
+
+
+                <div class="content" id="home">
+                    <!-- Content for Home tab -->
+                    <div class="container-record">
+                        <img class="record"
+                            src="https://res.cloudinary.com/benfiika/image/upload/v1472919793/design003/vinyl.png"
+                            alt="Vinyl Record">
+                        <div class="circle-text">
+                            <span>Year Book Digital</span>
+                            <p>Lorem Ipsum Dolor Amet</p>
+                        </div>
+                    </div>
+
+
+                    <div class="search-category-container">
+                        <div class="search">
+                            <form class="search-form">
+                                <?xml version="1.0" ?><svg fill="none" height="24" stroke-width="1.5"
+                                    viewBox="0 0 24 24" width="25" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.5 15.5L19 19" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M5 11C5 14.3137 7.68629 17 11 17C12.6597 17 14.1621 16.3261 15.2483 15.237C16.3308 14.1517 17 12.654 17 11C17 7.68629 14.3137 5 11 5C7.68629 5 5 7.68629 5 11Z"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                                <input id="searchInput" type="text" name="search" placeholder="Cari Siswa"
+                                    class="search-input">
+                            </form>
+                            <ul id="searchRecommendations" class="recommendations"></ul>
+                        </div>
+                        <select id="categoryFilter" class="category-filter">
+                            <option value="">All</option>
+                            <option value="beef">Beef</option>
+                            <option value="Seafood">Seafood</option>
+                            <!-- Add more options for other categories -->
+                        </select>
+                    </div>
+                    <div id="productList" class="product-list"></div>
+                </div>
             </div>
-              </div>
+        </div>
 
-
-            
-            <div class="content" id="home">
-                <!-- Content for Home tab -->
-
-                <select id="categoryFilter" class="category-filter">
-                    <option value="">All</option>
-                    <option value="beef">Beef</option>
-                    <option value="Seafood">Seafood</option>
-                    <!-- Add more options for other categories -->
-                </select>
-               
-            </div>
-
-            <div id="productList" class="product-list"></div>
-
-
-
-
-
-
-
-
-            <!-- Buat div untuk setiap kategori -->
+        <div class="content" id="categories" style="display: none;">
+            <!-- Content for Categories tab -->
             <div class="section-category-beef">
                 <div class="title-container">
                     <h1>Beef Food</h1>
@@ -127,15 +137,12 @@
                 </div>
                 <div id="seafoodProducts" class="product-container"></div>
             </div>
-        </div>
-
-        <!-- Tambahkan div untuk kategori lain jika diperlukan -->
-
-
-        <div class="content" id="categories" style="display: none;">
-            <!-- Content for Categories tab -->
             <div id="alternateProductList" class="alternate-product-list"></div>
         </div>
+
+
+
+
         <div class="content" id="search" style="display: none;">
             <!-- Content for Search tab -->
             <div class="greeting-container">
@@ -144,86 +151,85 @@
             <div id="quoteContainer" class="quote-container">
                 <p id="quoteText" class="quote-text"></p>
             </div>
-
-
-
-
-
-            <div class="search-category-container">
-                <div class="search">
-                    <form class="search-form">
-                        <?xml version="1.0" ?><svg fill="none" height="24" stroke-width="1.5" viewBox="0 0 24 24"
-                            width="25" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.5 15.5L19 19" stroke="currentColor" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M5 11C5 14.3137 7.68629 17 11 17C12.6597 17 14.1621 16.3261 15.2483 15.237C16.3308 14.1517 17 12.654 17 11C17 7.68629 14.3137 5 11 5C7.68629 5 5 7.68629 5 11Z"
-                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" /></svg>
-                        <input id="searchInput" type="text" name="search" placeholder="Places, Food, Selections"
-                            class="search-input">
-                    </form>
-                    <ul id="searchRecommendations" class="recommendations"></ul>
-                </div>
-
-            </div>
-            
-
         </div>
+
+
+
+
+        <div class="search-category-container">
+            <div class="search">
+                <form class="search-form">
+                    <?xml version="1.0" ?><svg fill="none" height="24" stroke-width="1.5" viewBox="0 0 24 24" width="25"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 15.5L19 19" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M5 11C5 14.3137 7.68629 17 11 17C12.6597 17 14.1621 16.3261 15.2483 15.237C16.3308 14.1517 17 12.654 17 11C17 7.68629 14.3137 5 11 5C7.68629 5 5 7.68629 5 11Z"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                    <input id="searchInput" type="text" name="search" placeholder="Places, Food, Selections"
+                        class="search-input">
+                </form>
+                <ul id="searchRecommendations" class="recommendations"></ul>
+            </div>
+        </div>
+
+
+
         <div class="content" id="favorites" style="display: none;">
             <!-- Content for Favorites tab -->
             <h2>Favorites</h2>
             <p>Your favorite recipes will appear here.</p>
         </div>
-    </div>
-    <script>
-        $(document).ready(function () {
-            $(".tab").click(function () {
-                if (!$(this).hasClass("active")) {
-                    $(".tab").removeClass("active");
-                    $(this).addClass("active");
-                    $(".content").hide();
-                    $("#" + $(this).data("tab")).fadeIn(300);
+
+        <script>
+            $(document).ready(function () {
+                $(".tab").click(function () {
+                    if (!$(this).hasClass("active")) {
+                        $(".tab").removeClass("active");
+                        $(this).addClass("active");
+                        $(".content").hide();
+                        $("#" + $(this).data("tab")).fadeIn(300);
+                    }
+                });
+                // Set the initial active tab
+                $(".tab[data-tab='home']").click();
+            });
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const greetingElement = document.getElementById('greeting');
+                const currentTime = new Date().getHours();
+
+                let greetingMessage = '';
+
+                if (currentTime >= 4 && currentTime < 12) {
+                    greetingMessage = 'Selamat Pagi mau masak apa hari ini?..';
+                } else if (currentTime >= 12 && currentTime < 18) {
+                    greetingMessage = 'Selamat Siang';
+                } else if (currentTime >= 18 && currentTime < 21) {
+                    greetingMessage = 'Selamat Sore';
+                } else {
+                    greetingMessage = 'Selamat Malam';
+                }
+
+                greetingElement.textContent = greetingMessage;
+            });
+        </script>
+        <script src="js/script.js"></script>
+        <script>
+            AOS.init();
+            // JavaScript to change the center image on scroll
+            window.addEventListener('scroll', function () {
+                var img = document.getElementById('center-image');
+                var scrolled = window.scrollY;
+
+                // Change the image source based on scroll position
+                if (scrolled > 100) {
+                    img.src = 'favicon.png';
+                } else {
+                    img.src = 'initial-image.jpg';
                 }
             });
-            // Set the initial active tab
-            $(".tab[data-tab='home']").click();
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const greetingElement = document.getElementById('greeting');
-            const currentTime = new Date().getHours();
-
-            let greetingMessage = '';
-
-            if (currentTime >= 4 && currentTime < 12) {
-                greetingMessage = 'Selamat Pagi mau masak apa hari ini?..';
-            } else if (currentTime >= 12 && currentTime < 18) {
-                greetingMessage = 'Selamat Siang';
-            } else if (currentTime >= 18 && currentTime < 21) {
-                greetingMessage = 'Selamat Sore';
-            } else {
-                greetingMessage = 'Selamat Malam';
-            }
-
-            greetingElement.textContent = greetingMessage;
-        });
-    </script>
-    <script src="js/script.js"></script>
-    <script>
-        AOS.init();
-        // JavaScript to change the center image on scroll
-        window.addEventListener('scroll', function () {
-            var img = document.getElementById('center-image');
-            var scrolled = window.scrollY;
-
-            // Change the image source based on scroll position
-            if (scrolled > 100) {
-                img.src = 'favicon.png';
-            } else {
-                img.src = 'initial-image.jpg';
-            }
-        });
-    </script>
+        </script>
 
 </body>
 

@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oi&family=Purple+Purse&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Oi&family=Purple+Purse&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -22,8 +23,7 @@ body:focus {
 
 :root {
   --gold-color: #FACA78;
-  --dark-bg: #faf6e7
-  --medium-bg: #794A3A;
+  --dark-bg: #faf6e7 --medium-bg: #794A3A;
   --light-bg: #e5e5e5;
   --grey-text: #794A3A;
   --white: #794A3A;
@@ -50,12 +50,15 @@ body {
 .greeting-container h1 {
   font-family: "Lobster Two", sans-serif;
   font-size: 50px;
-  background: #fff; background-image: radial-gradient(at 85.4% 36.8%, hsl(348, 61%, 77%) 0px, transparent 50%),radial-gradient(at 22.6% 78.0%, hsl(198, 54%, 74%) 0px, transparent 50%),radial-gradient(at 20.0% 27.8%, hsl(43, 90%, 75%) 0px, transparent 50%),radial-gradient(at 73.7% 85.9%, hsl(43, 90%, 75%) 0px, transparent 50%),radial-gradient(at 41.8% 55.2%, hsl(43, 90%, 75%) 0px, transparent 50%)
+  background: #fff;
+  background-image: radial-gradient(at 85.4% 36.8%, hsl(348, 61%, 77%) 0px, transparent 50%), radial-gradient(at 22.6% 78.0%, hsl(198, 54%, 74%) 0px, transparent 50%), radial-gradient(at 20.0% 27.8%, hsl(43, 90%, 75%) 0px, transparent 50%), radial-gradient(at 73.7% 85.9%, hsl(43, 90%, 75%) 0px, transparent 50%), radial-gradient(at 41.8% 55.2%, hsl(43, 90%, 75%) 0px, transparent 50%)
 }
 
+.grad-container {}
 
-.grad{
-  background-color: #f9d997 ;
+.grad {
+  background-color: #f9d997;
+  max-width: 480px;
 }
 
 
@@ -76,12 +79,10 @@ body {
 .circle-text span {
   font-family: "Oi", serif;
   font-size: 30px;
-  
-  
   color: #faf6e7;
   -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: #000000;
-    -webkit-text-fill-color: #e43d31;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-fill-color: #e43d31;
 }
 
 .circle-text p {
@@ -104,7 +105,8 @@ body {
   max-width: 480px;
 }
 
-.header-left, .header-right {
+.header-left,
+.header-right {
   font-size: 24px;
   border: 1px solid;
   border-radius: 50px;
@@ -121,12 +123,11 @@ body {
   border: 4px solid #ccc;
   border-radius: 50%;
 }
+
 .search-category-container {
+  display: inline-flex;
   align-items: center;
-  width: 100%;
-  justify-content: center;
-  height: 56px;
-  margin-bottom: 30px;
+  margin: 20px;
 }
 
 .search {
@@ -134,14 +135,13 @@ body {
 }
 
 .search-form {
-  display: flex;
+  display: inline-flex;
   height: 56px;
-  align-items: center;
-  border: 1px solid #000;
-  padding: 15px;
   background-color: #faf6e7;
-  margin: 20px 0px;
-  width: 100%;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 5px;
+  padding: 15px;
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
@@ -154,6 +154,8 @@ body {
   outline: none;
   color: var(--white);
   background-color: #faf6e7;
+  font-family: "Coiny", system-ui;
+  text-transform: uppercase;
 }
 
 .category-filter {
@@ -166,7 +168,6 @@ body {
   color: #000;
   padding: 8px 30px;
   font-size: 14px;
-  margin-bottom: 24px;
   font-weight: 600;
   border-radius: 5px;
   font-family: "Coiny", system-ui;
@@ -208,14 +209,14 @@ body {
 .product-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(110px, 1fr));
-
+  position: relative;
 }
 
 .product-item {
   text-align: center;
   border: 1px solid #000;
   background-color: #faf6e7;
-  
+  width: 100%;
   padding: 10px;
 }
 
@@ -259,8 +260,8 @@ body {
   color: #000;
   text-align: left;
   line-height: 1.4;
- font-family: "Chicle", serif;
- font-family: "Purple Purse", serif;
+  font-family: "Chicle", serif;
+  font-family: "Purple Purse", serif;
 }
 
 .product-info {
@@ -339,11 +340,12 @@ body {
 
 /* Style untuk setiap bagian detail siswa */
 .student-details-section {
-  flex: 1 1 50%; /* 50% width on large screens, full width on small screens */
+  flex: 1 1 50%;
+  /* 50% width on large screens, full width on small screens */
   padding: 20px;
   background-color: #f7d098;
   margin: 10px;
-  
+
 }
 
 /* Style untuk judul setiap bagian */
@@ -391,7 +393,8 @@ body {
 /* Responsif untuk layar kecil */
 @media (max-width: 768px) {
   .student-details-section {
-    flex: 1 1 100%; /* Full width on small screens */
+    flex: 1 1 100%;
+    /* Full width on small screens */
   }
 }
 
@@ -403,19 +406,23 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+
 .id-card {
-  background-color:#DCDFCA;
+  background-color: #DCDFCA;
   padding: 0px;
   display: block;
   border-radius: 12px;
   overflow: hidden;
   border: 3px solid #794A3A;
 }
+
 .header {
   padding: 10px;
   background-color: #E58D3C;
   text-align: left;
+
 }
+
 .header img {
   width: 30px;
 
@@ -427,6 +434,7 @@ body {
   font-size: 16px;
   font-weight: 600;
 }
+
 .id {
   display: inline-block;
   float: left;
@@ -435,12 +443,14 @@ body {
   color: #fff;
   margin-left: 60px;
 }
+
 .b-border {
   height: 2px;
   display: block;
   background-color: #E58D3C;
   margin-top: 1px;
 }
+
 .card-detail {
   width: 100%;
   display: flex;
@@ -449,15 +459,18 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .stu-photo {
   float: left;
   width: 100px;
 }
+
 .stu-photo img {
   width: 100%;
   border: 1px solid #4a0a2c;
   border-radius: 5px;
 }
+
 .stu-info {
   float: left;
   width: calc(100% - 100px);
@@ -466,6 +479,7 @@ body {
   text-align: left;
   text-transform: capitalize;
 }
+
 .stu-info h3 {
   font-size: 15px;
   margin: 0 0 10px 0;
@@ -476,19 +490,23 @@ body {
   color: #fff;
   border: 1px solid #4a0a2cfc;
 }
+
 .stu-info p {
   font-size: 12px;
   margin: 0 0 5px 0;
   font-weight: 300;
 }
+
 .stu-info p span {
   font-weight: 600;
   text-transform: uppercase;
 }
+
 footer {
   padding: 5px 0;
   border-top: 1px solid #000;
 }
+
 footer p {
   font-size: 7px;
   margin: 0 0 2px 0;
@@ -556,7 +574,7 @@ footer p {
   background-color: #ffffff;
   padding: 15px;
   transform: rotate(6deg);
-  
+
   text-align: center;
 }
 
@@ -569,8 +587,8 @@ footer p {
   height: 400px;
   object-fit: cover;
 
- 
-  
+
+
 }
 
 
@@ -715,7 +733,8 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--medium-bg);
+  background-color: #faf6e7;
+  border-top: 2px solid #ccc;
 }
 
 .tab i {
@@ -735,9 +754,6 @@ footer p {
 
 }
 
-.content {
-  padding: 20px;
-}
 
 
 /* Styling for the alternate product list */
@@ -759,16 +775,16 @@ footer p {
   margin-top: auto;
   display: inline-block;
   box-sizing: content-box;
-  
+
   position: relative;
   width: 370px;
-height: 362px;
+  height: 362px;
   padding: 1em;
   color: #000;
   font-size: 16px;
   background-size: 51% 100%;
   background-repeat: no-repeat;
-  background-image: radial-gradient(circle at 0 0%, rgba(255,255,224,0) 19px, #f3f1c9 20px), radial-gradient(circle at 100% 60%, rgba(255,255,224,0) 19px, #f3f1c9 20px);
+  background-image: radial-gradient(circle at 0 0%, rgba(255, 255, 224, 0) 19px, #f3f1c9 20px), radial-gradient(circle at 100% 60%, rgba(255, 255, 224, 0) 19px, #f3f1c9 20px);
   background-position: top left, top right;
 }
 
@@ -838,7 +854,7 @@ height: 362px;
   background-color: #7fd8be;
   animation: bubbleChat 5s ease infinite;
   border: 3px solid #794A3A;
-  
+
   align-items: center;
   justify-content: center;
 }
@@ -859,16 +875,19 @@ height: 362px;
 
 @keyframes bubbleChat {
   0% {
-      transform: translateY(100%);
-      opacity: 0;
+    transform: translateY(100%);
+    opacity: 0;
   }
-  10%, 90% {
-      transform: translateX(0);
-      opacity: 1;
+
+  10%,
+  90% {
+    transform: translateX(0);
+    opacity: 1;
   }
+
   100% {
-      transform: translateY(100%);
-      opacity: 0;
+    transform: translateY(100%);
+    opacity: 0;
   }
 }
 
