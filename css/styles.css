@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -65,29 +66,25 @@ body {
   animation: spin 4s linear infinite;
 }
 
-
 .circle-text {
+  text-align: center;
   position: relative;
-  width: 100%; /* Atur sesuai ukuran yang diinginkan */
-  height: 100%; /* Atur sesuai ukuran yang diinginkan */
-  top: -200px;
-  margin-top: -50px; /* Setengah dari tinggi elemen untuk mengatur ke tengah */
-  margin-left: -50px; /* Setengah dari lebar elemen untuk mengatur ke tengah */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none; /* Untuk memastikan teks tidak mengganggu interaksi */
+  top: -20em;
 }
 
-.circle-text svg {
-  width: 80%;
-  height: 80%;
+.circle-text span {
+  font-family: "Oi", serif;
+  font-size: 30px;
+  
+  
+  color: #faf6e7;
+  -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #000000;
+    -webkit-text-fill-color: #e43d31;
 }
 
-.circle-text text {
-  fill: #333;
-  font-size: 12px;
-  text-anchor: middle;
+.circle-text p {
+  -webkit-text-fill-color: #e43d31;
 }
 
 /* Gaya umum untuk kontainer pencarian */
