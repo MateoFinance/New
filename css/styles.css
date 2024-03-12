@@ -86,6 +86,7 @@ body {
 
 .circle-text p {
   -webkit-text-fill-color: #e43d31;
+  font-family: "Coiny", system-ui;
 }
 
 /* Gaya umum untuk kontainer pencarian */
@@ -168,7 +169,7 @@ body {
   margin-bottom: 24px;
   font-weight: 600;
   border-radius: 5px;
-  font-family: "Chicle", serif;
+  font-family: "Coiny", system-ui;
   text-transform: uppercase;
 }
 
